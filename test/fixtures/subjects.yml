@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  abbreviation: MyString
+  name: MyString
+  description: MyText
+  college: one
+  teacher: one
+
+two:
+  abbreviation: MyString
+  name: MyString
+  description: MyText
+  college: two
+  teacher: two

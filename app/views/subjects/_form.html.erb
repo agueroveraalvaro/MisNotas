@@ -1,0 +1,41 @@
+<%= form_for(subject) do |f| %>
+  <% if subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+      <% subject.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abbreviation %>
+    <%= f.text_field :abbreviation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  Profesor<br />
+  <select name="subject[teacher_id]">
+    <% Teacher.all.each do |teacher| %>
+      <% if teacher.college_id == current_college.id then %>
+        <option value="<%= teacher.id %>"><%= teacher.f_name+' '+teacher.s_name+' '+teacher.l_name %></option>
+      <% end %>
+    <% end %>
+  </select><br /><br /><br />
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
