@@ -1,24 +1,11 @@
-# README
+Proyecto para controlar notas y asistencias de alumnos y un colegio con profesores que pueden administrarlos.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gemas :
+  
+  ransack : para filtrar las busquedas
+  devise : para generación de usuarios 
+  
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby version 2.3.0
+Rails 5.0.0
